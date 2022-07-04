@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./header.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <img class="cabecalho__logo" src="./assets/logo-matematica.png" alt="Logotipo de Ábaco">
+        <button class="cabecalho__btnClear">limpar dados</button>
+    </header>
+
+    <main>
+
+        <!--  -->
+        <section class="entradaDados">
+            <input type="number" id="nPopulacao" placeholder="Número de população">
+            <input type="number" id="nAmostra" placeholder="Número da amostra">
+            <button onclick="calcAS()">Calcular</button>
+        </section>
+
+        <section>
+            <p>
+                Número sorteado: <span id="resultNSorteado"></span>
+            </p>
+        </section>
+
+        <section>
+            <span id="resultadoBruto">Aguardando resultado...</span>
+        </section>
+
+        <script src="./showCalc.js"></script>
+    </main>
+</body>
+
+</html>
