@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./css/config.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/inputData.css">
 
     <title>Document</title>
 </head>
@@ -15,27 +17,33 @@
     <!-- CABEÇALHO -->
     <header class="cabecalho">
         <img class="cabecalho__logo" src="./assets/logo-matematica.png" alt="Logotipo de Ábaco">
-        <button class="cabecalho__btnClear">limpar dados</button>
+        <h1 class="cabecalho__titulo">Amostragem Sistemática</h1>
     </header>
 
     <main>
 
-        <!--  -->
+        <h2 class="main__titulo">Inisira as informações para realizar o cáculo</h2>
+
+        <!-- AREA DE INSERÇÃO DOS DADOS -->
         <section class="entradaDados">
-            <input type="number" id="nPopulacao" placeholder="Número de população">
-            <input type="number" id="nAmostra" placeholder="Número da amostra">
+            <input class="inputUser" type="number" id="nPopulacao" placeholder="Número de população">
+            <input class="inputUser" type="number" id="nAmostra" placeholder="Número da amostra">
             <button onclick="calcAS()">Calcular</button>
         </section>
 
+        <!-- AREA DE EXIBIÇÃO DO NÚMERO SORTEADO -->
         <section>
             <p>
                 Número sorteado: <span id="resultNSorteado"></span>
             </p>
         </section>
 
+        <!-- AREA DE EXIBIÇÃO DE TODOS OS RESULTADOS -->
         <section>
             <span id="resultadoBruto">Aguardando resultado...</span>
         </section>
+
+        <button class="cabecalho__btnClear">limpar</button>
 
         <script src="./showCalc.js"></script>
     </main>
