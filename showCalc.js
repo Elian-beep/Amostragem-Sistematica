@@ -6,9 +6,11 @@ const resultadoBruto = document.getElementById("resultadoBruto");
 let calcItem;
 let resultados = [];
 
+let intervaloAmostragem = nPopulacao.value / nAmostra.value;
+let nSorteado = parseInt(Math.random() * (intervaloAmostragem - 1) + 1);
+
 function calcAS() {
-    let intervaloAmostragem = nPopulacao.value / nAmostra.value;
-    let nSorteado = parseInt(Math.random() * (intervaloAmostragem - 1) + 1);
+
     // let nSorteado = 2;
     console.log("Numero sorteado: ", nSorteado);
     exibirNumeroSorteado(nSorteado);
@@ -20,10 +22,10 @@ function calcAS() {
     exibirResultado(resultados);
 }
 
-function exibirNumeroSorteado(nSorteado){
-    resultNSorteado.innerHTML = ""+nSorteado+"";
+function exibirNumeroSorteado(nSorteado) {
+    resultNSorteado.innerHTML = "" + nSorteado + "";
 }
 
-function exibirResultado(resultados){
-    resultadoBruto.innerHTML = ""+resultados+"";
+function exibirResultado(resultados) {
+    resultadoBruto.innerHTML = "" + resultados + "";
 }

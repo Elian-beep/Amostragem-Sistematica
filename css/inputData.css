@@ -5,7 +5,31 @@
     gap: .7rem;
 }
 
+.inputData__areaNumbersData{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .inputData__input{
+    width: 45%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    margin-bottom: 1rem;
+
+    text-align: center;
+}
+
+.inputData__areaNumberSample{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputData__input--disabled{
     width: 80%;
     padding: 5px;
     border: none;

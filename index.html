@@ -26,8 +26,24 @@
 
         <!-- AREA DE INSERÇÃO DOS DADOS -->
         <section class="inputData">
-            <input class="inputData__input" type="number" id="nPopulacao" placeholder="Número de população">
-            <input class="inputData__input" type="number" id="nAmostra" placeholder="Número da amostra">
+            <div class="inputData__areaNumbersData">
+                <input class="inputData__input" type="number" id="nPopulacao" placeholder="Número de população">
+                <input class="inputData__input" type="number" id="nAmostra" placeholder="Número da amostra">
+            </div>
+
+            <div class="inputData__areaNumberSample">
+                <div>
+                    <input type="radio" name="sampleNumber" value="true" id="radioTrue" checked>
+                    <label for="radioTrue">Sortear automáticamente</label>
+                </div>
+                <div>
+                    <input type="radio" name="sampleNumber" value="false" id="radioFalse">
+                    <label for="radioFalse">Digita número sorteado</label>
+                </div>
+
+                <input type="text" class="inputData__input--disabled" disabled>
+            </div>
+
             <button class="inputData__btnCalc" onclick="calcAS()">Calcular</button>
         </section>
 
