@@ -1,31 +1,31 @@
 const nPopulacao = document.getElementById("nPopulacao");
 const nAmostra = document.getElementById("nAmostra");
+const nInputSorteado = document.getElementById("nSorteado");
 const resultNSorteado = document.getElementById("resultNSorteado");
 const resultadoBruto = document.getElementById("resultadoBruto");
 
-let calcItem;
+const escolhaGerarNumeroAleatorio = document.querySelector("#radioAleatorio");
+const escolhaDigitarNumero = document.querySelector("#radioDigitado");
+
+let calcItem, nSorteado;
 let resultados = [];
 
-let intervaloAmostragem = nPopulacao.value / nAmostra.value;
-let nSorteado = parseInt(Math.random() * (intervaloAmostragem - 1) + 1);
-
 function calcAS() {
+    resultados.splice(0, resultados.length);
+    let intervaloAmostragem = nPopulacao.value / nAmostra.value;
 
-    // let nSorteado = 2;
+    if(escolhaGerarNumeroAleatorio.checked){
+        nSorteado = parseInt(Math.random() * (intervaloAmostragem - 1) + 1);
+    }else if(escolhaDigitarNumero.checked){
+        nSorteado = parseInt(nInputSorteado.value);
+    }
+
     console.log("Numero sorteado: ", nSorteado);
-    exibirNumeroSorteado(nSorteado);
+    resultNSorteado.innerHTML = "" + nSorteado + "";
 
     for (var i = 0; i < parseInt(nAmostra.value); i++) {
         calcItem = nSorteado + (i * intervaloAmostragem);
         resultados.push(calcItem);
     }
-    exibirResultado(resultados);
-}
-
-function exibirNumeroSorteado(nSorteado) {
-    resultNSorteado.innerHTML = "" + nSorteado + "";
-}
-
-function exibirResultado(resultados) {
-    resultadoBruto.innerHTML = "" + resultados + "";
+    resultadoBruto.innerHTML = resultados;
 }

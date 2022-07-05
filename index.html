@@ -33,15 +33,15 @@
 
             <div class="inputData__areaNumberSample">
                 <div>
-                    <input type="radio" name="sampleNumber" value="true" id="radioTrue" checked>
+                    <input type="radio" name="numeroAleatorio" value="true" id="radioAleatorio" checked>
                     <label for="radioTrue">Sortear automáticamente</label>
                 </div>
                 <div>
-                    <input type="radio" name="sampleNumber" value="false" id="radioFalse">
+                    <input type="radio" name="numeroAleatorio" value="false" id="radioDigitado">
                     <label for="radioFalse">Digita número sorteado</label>
                 </div>
 
-                <input type="text" class="inputData__input--disabled" disabled>
+                <input type="text" class="inputData__input--disabled" id="nSorteado" placeholder="Número sorteado">
             </div>
 
             <button class="inputData__btnCalc" onclick="calcAS()">Calcular</button>
@@ -56,7 +56,9 @@
 
         <!-- AREA DE EXIBIÇÃO DE TODOS OS RESULTADOS -->
         <section>
-            <span id="resultadoBruto">Aguardando resultado...</span>
+            <p>
+                Resultado: <span id="resultadoBruto"></span>
+            </p>
         </section>
 
         <button class="cabecalho__btnClear">limpar</button>
