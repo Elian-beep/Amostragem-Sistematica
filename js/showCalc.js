@@ -7,6 +7,8 @@ const resultadoBruto = document.getElementById("resultadoBruto");
 const escolhaGerarNumeroAleatorio = document.querySelector("#radioAleatorio");
 const escolhaDigitarNumero = document.querySelector("#radioDigitado");
 
+const btnClear = document.getElementById("btnClear");
+
 let calcItem, nSorteado;
 let resultados = [];
 
@@ -21,11 +23,21 @@ function calcAS() {
     }
 
     console.log("Numero sorteado: ", nSorteado);
-    resultNSorteado.innerHTML = "" + nSorteado + "";
+    resultNSorteado.innerHTML = nSorteado;
 
     for (var i = 0; i < parseInt(nAmostra.value); i++) {
         calcItem = nSorteado + (i * intervaloAmostragem);
         resultados.push(calcItem);
     }
     resultadoBruto.innerHTML = resultados;
+}
+
+function clearAll() {
+    btnClear.addEventListener('click', () => {
+        nPopulacao.value = '';
+        nAmostra.value = '';
+        nInputSorteado = '';
+        nSorteado = '';
+        resultados.splice(0, resultados.length);
+    });
 }
