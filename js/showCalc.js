@@ -28,8 +28,17 @@ function calcAS() {
     for (var i = 0; i < parseInt(nAmostra.value); i++) {
         calcItem = nSorteado + (i * intervaloAmostragem);
         resultados.push(calcItem);
+        createElementResult(calcItem);
     }
-    resultadoBruto.innerHTML = resultados;
+    // resultadoBruto.innerHTML = resultados;
+}
+
+function createElementResult(calcItem){
+    let li = document.createElement('li');
+    li.innerHTML = calcItem;
+    resultadoBruto.appendChild(li);
+
+    console.log(calcItem);
 }
 
 function clearAll() {
