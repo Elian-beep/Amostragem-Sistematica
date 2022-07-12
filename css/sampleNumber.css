@@ -1,0 +1,11 @@
+.areaSampleNumber{
+    margin-left: 1rem;
+    margin-top: 2rem;
+    max-width: 90vw;
+}
+
+.areaSampleNumber p{
+    font-size: 15pt;
+
+    border-bottom: 1px solid #000000;
+}

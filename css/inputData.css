@@ -23,7 +23,7 @@
 }
 
 .inputData__areaNumberSample{
-    display: flex;
+    display: none; /*flex*/
     flex-direction: column;
     align-items: center;
     justify-content: center;

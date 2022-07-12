@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/config.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/inputData.css">
+    <link rel="stylesheet" href="./css/sampleNumber.css">
+    <link rel="stylesheet" href="./css/result.css">
 
     <title>Document</title>
 </head>
@@ -33,37 +35,41 @@
 
             <div class="inputData__areaNumberSample">
                 <div>
-                    <input type="radio" name="numeroAleatorio" value="true" id="radioAleatorio" checked>
+                    <input type="radio" onclick="DisabledInput()" name="numeroAleatorio" value="true" id="radioAleatorio" checked>
                     <label for="radioTrue">Sortear automáticamente</label>
                 </div>
                 <div>
-                    <input type="radio" name="numeroAleatorio" value="false" id="radioDigitado">
+                    <input type="radio" onclick="AbledInput()" name="numeroAleatorio" value="false" id="radioDigitado">
                     <label for="radioFalse">Digita número sorteado</label>
                 </div>
 
-                <input type="text" class="inputData__input--disabled" id="nSorteado" placeholder="Número sorteado">
+                <input disabled="disabled" type="text" class="inputData__input--disabled" id="nSorteado" placeholder="Número sorteado">
             </div>
 
             <button class="inputData__btnCalc" onclick="calcAS()">Calcular</button>
         </section>
 
-        <!-- AREA DE EXIBIÇÃO DO NÚMERO SORTEADO -->
-        <section>
-            <p>
-                Número sorteado: <span id="resultNSorteado"></span>
-            </p>
-        </section>
+        <div>
+            <!-- AREA DE EXIBIÇÃO DO NÚMERO SORTEADO -->
+            <section class="areaSampleNumber">
+                <p>
+                    Número sorteado: <span id="resultNSorteado"></span>
+                </p>
+            </section>
 
-        <!-- AREA DE EXIBIÇÃO DE TODOS OS RESULTADOS -->
-        <section>
-            <p>
-                Resultado: <span id="resultadoBruto"></span>
-            </p>
-        </section>
+            <!-- AREA DE EXIBIÇÃO DE TODOS OS RESULTADOS -->
+            <section class="areaResult">
+                <p>
+                    Resultado...<span id="resultadoBruto"></span>
+                </p>
+            </section>
+        </div>
+
 
         <button class="cabecalho__btnClear" id="btnClear" onclick="clearAll()">limpar</button>
 
         <script src="./js/showCalc.js"></script>
+        <script src="./js/DisabledInput.js"></script>
     </main>
 </body>
 
