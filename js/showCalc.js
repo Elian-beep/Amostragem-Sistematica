@@ -13,12 +13,13 @@ let calcItem, nSorteado;
 let resultados = [];
 
 function calcAS() {
+    resultadoBruto.textContent = "";
     resultados.splice(0, resultados.length);
     let intervaloAmostragem = nPopulacao.value / nAmostra.value;
 
-    if(escolhaGerarNumeroAleatorio.checked){
+    if (escolhaGerarNumeroAleatorio.checked) {
         nSorteado = parseInt(Math.random() * (intervaloAmostragem - 1) + 1);
-    }else if(escolhaDigitarNumero.checked){
+    } else if (escolhaDigitarNumero.checked) {
         nSorteado = parseInt(nInputSorteado.value);
     }
 
@@ -33,7 +34,7 @@ function calcAS() {
     // resultadoBruto.innerHTML = resultados;
 }
 
-function createElementResult(calcItem){
+function createElementResult(calcItem) {
     let div = document.createElement('div');
     div.innerHTML = calcItem;
     div.classList.add('itemResultado');
@@ -43,11 +44,12 @@ function createElementResult(calcItem){
 }
 
 function clearAll() {
-    btnClear.addEventListener('click', () => {
-        nPopulacao.value = '';
-        nAmostra.value = '';
-        // nInputSorteado = '';
-        nSorteado = '';
-        resultados.splice(0, resultados.length);
-    });
+    nPopulacao.value = '';
+    nAmostra.value = '';
+    // nInputSorteado = '';
+    nSorteado = '';
+    resultados.splice(0, resultados.length);
+
+    resultNSorteado.textContent = "";
+    resultadoBruto.textContent = "";
 }
