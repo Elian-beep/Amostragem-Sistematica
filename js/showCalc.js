@@ -34,9 +34,10 @@ function calcAS() {
 }
 
 function createElementResult(calcItem){
-    let li = document.createElement('li');
-    li.innerHTML = calcItem;
-    resultadoBruto.appendChild(li);
+    let div = document.createElement('div');
+    div.innerHTML = calcItem;
+    div.classList.add('itemResultado');
+    resultadoBruto.appendChild(div);
 
     console.log(calcItem);
 }
@@ -45,7 +46,7 @@ function clearAll() {
     btnClear.addEventListener('click', () => {
         nPopulacao.value = '';
         nAmostra.value = '';
-        nInputSorteado = '';
+        // nInputSorteado = '';
         nSorteado = '';
         resultados.splice(0, resultados.length);
     });
