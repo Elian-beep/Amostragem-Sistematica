@@ -28,6 +28,7 @@
     border: none;
     height: 2.5rem;
     width: 2.5rem;
+    background: none;
 
     display: flex;
     align-items: center;
@@ -39,8 +40,4 @@
     left: 10px;
     right: 50vw;
 
-}
-
-.btnBackTop:active{
-    background: #4682B4;
 }
