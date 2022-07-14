@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,14 +13,15 @@
     <link rel="stylesheet" href="./css/result.css">
     <link rel="stylesheet" href="./css/bottomButtons.css">
 
-    <title>Document</title>
+    <title>Amostragem Sistemática</title>
 </head>
 
-<body>
+<body class="container">
     <!-- CABEÇALHO -->
     <header class="cabecalho">
         <img class="cabecalho__logo" src="./assets/logo-matematica.png" alt="Logotipo de Ábaco">
         <h1 class="cabecalho__titulo">Amostragem Sistemática</h1>
+        <input type="checkbox" id="btnTheme">
     </header>
 
     <main>
@@ -53,7 +54,7 @@
         <div>
             <!-- AREA DE EXIBIÇÃO DO NÚMERO SORTEADO -->
             <section class="areaSampleNumber">
-                <p>
+                <p class="resultNumberSample">
                     Número sorteado: <span id="resultNSorteado"></span>
                 </p>
             </section>
@@ -77,6 +78,7 @@
         <script src="./js/showCalc.js"></script>
         <script src="./js/DisabledInput.js"></script>
         <script src="./js/backToTop.js"></script>
+        <script src="./js/switchTheme.js"></script>
     </main>
 </body>
 
