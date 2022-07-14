@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/inputData.css">
     <link rel="stylesheet" href="./css/sampleNumber.css">
     <link rel="stylesheet" href="./css/result.css">
+    <link rel="stylesheet" href="./css/bottomButtons.css">
 
     <title>Document</title>
 </head>
@@ -60,14 +61,20 @@
             <!-- AREA DE EXIBIÇÃO DE TODOS OS RESULTADOS -->
             <section class="areaResult" id="resultadoBruto">
                 <!-- Os resultados serão exibidos dentro desta section -->
+                
             </section>
         </div>
 
 
-        <button class="cabecalho__btnClear" id="btnClear" onclick="clearAll()">limpar</button>
+        <div>
+            <button class="btnBackTop" id="backTop">Top</button>
+            <button class="cabecalho__btnClear" id="btnClear" onclick="clearAll()">limpar</button>
+        </div>
+        
 
         <script src="./js/showCalc.js"></script>
         <script src="./js/DisabledInput.js"></script>
+        <script src="./js/backToTop.js"></script>
     </main>
 </body>
 

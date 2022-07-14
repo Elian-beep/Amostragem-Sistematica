@@ -21,29 +21,3 @@
     font-size: 16pt;
     text-align: center;
 }
-
-.cabecalho__btnClear{
-    background: #ADD8E6;
-    border: 1px solid #101010;
-    border-radius: 5px;
-    font-size: 16pt;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: .4rem;
-    height: 3rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    left: 50vw;
-}
-
-.cabecalho__btnClear:active{
-    background: #4682B4;
-}
