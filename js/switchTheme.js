@@ -25,7 +25,7 @@ btnSwitchTheme.addEventListener('click', ()=> {
 
         areaResultNumberSample.style.borderBottom = "1px solid #FFFFFF"
 
-        areaBtnTheme.style.backgroundColor = "#0053e3";
+        // areaBtnTheme.style.backgroundColor = "#0053e3";
 
         isLight = false;
     }else if(!isLight){
@@ -44,7 +44,7 @@ btnSwitchTheme.addEventListener('click', ()=> {
 
         areaResultNumberSample.style.borderBottom = "1px solid #000"
         
-        areaBtnTheme.style.backgroundColor = "#e7b510";
+        // areaBtnTheme.style.backgroundColor = "#e7b510";
         isLight = true;
     }
 });

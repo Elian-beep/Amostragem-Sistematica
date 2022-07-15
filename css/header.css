@@ -27,16 +27,25 @@
 }
 
 .labelTheme{
-    padding: 5px;
-    border-radius: 100%;
+    display: inline-block;
     width: 35px;
     height: 35px;
-    background-color: #e7b510;
+    background: none;
+    cursor: pointer;
+    border-radius: 100%;
+    position: relative;
+    /* background-color: #e7b510; */
 }
 
 .labelTheme::after{
-    width: 35px;
-    height: 35px;
+    background-color: #e7b510;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    place-content: center;
+    line-height: 0;
     content: url('../assets/sun-regular.svg');
     box-shadow: 0 0 5px rgba(0, 0, 0, .25);
     transition: background-color 0.3s, transform 0.3s ease-in;
@@ -44,4 +53,6 @@
 
 #btnTheme:checked + .labelTheme::after {
     content: url('../assets/moon-regular.svg');
+    background-color: #0053e3;
+    transform: rotate(360deg);
 }
