@@ -38,7 +38,7 @@
 }
 
 .labelTheme::after{
-    background-color: #e7b510;
+    /* background-color: #e7b510; */
     width: 2rem;
     height: 2rem;
     position: absolute;
