@@ -3,6 +3,7 @@ const areaBody = document.querySelector(".container");
 const areaInputsLeft = document.querySelector("#nPopulacao");
 const areaInputsRight = document.querySelector("#nAmostra");
 const areaResultNumberSample = document.querySelector(".resultNumberSample");
+const areaBtnTheme = document.querySelector(".labelTheme");
 
 const btnSwitchTheme = document.getElementById('btnTheme');
 let isLight = true;
@@ -24,6 +25,8 @@ btnSwitchTheme.addEventListener('click', ()=> {
 
         areaResultNumberSample.style.borderBottom = "1px solid #FFFFFF"
 
+        areaBtnTheme.style.backgroundColor = "#0053e3";
+
         isLight = false;
     }else if(!isLight){
         areaHeader.style.background = "#FFFFFF";
@@ -40,6 +43,8 @@ btnSwitchTheme.addEventListener('click', ()=> {
         areaInputsRight.style.borderBottom = "1px solid #000"
 
         areaResultNumberSample.style.borderBottom = "1px solid #000"
+        
+        areaBtnTheme.style.backgroundColor = "#e7b510";
         isLight = true;
     }
 });
