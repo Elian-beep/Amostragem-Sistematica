@@ -4,8 +4,7 @@ const nInputSorteado = document.getElementById("nSorteado");
 const resultNSorteado = document.getElementById("resultNSorteado");
 const resultadoBruto = document.getElementById("resultadoBruto");
 
-const escolhaGerarNumeroAleatorio = document.querySelector("#radioAleatorio");
-const escolhaDigitarNumero = document.querySelector("#radioDigitado");
+const escolhaDigitarNumero = document.querySelector("#checkboxDigitado");
 
 const btnClear = document.getElementById("btnClear");
 
@@ -17,7 +16,7 @@ function calcAS() {
     resultados.splice(0, resultados.length);
     let intervaloAmostragem = nPopulacao.value / nAmostra.value;
 
-    if (escolhaGerarNumeroAleatorio.checked) {
+    if (!escolhaDigitarNumero.checked) {
         nSorteado = parseInt(Math.random() * (intervaloAmostragem - 1) + 1);
     } else if (escolhaDigitarNumero.checked) {
         nSorteado = parseInt(nInputSorteado.value);
@@ -46,10 +45,14 @@ function createElementResult(calcItem) {
 function clearAll() {
     nPopulacao.value = '';
     nAmostra.value = '';
-    // nInputSorteado = '';
+    nInputSorteado.value = '';
     nSorteado = '';
     resultados.splice(0, resultados.length);
 
     resultNSorteado.textContent = "";
     resultadoBruto.textContent = "";
+
+    if(nInputSorteado != null){
+        nInputSorteado = '';
+    }
 }

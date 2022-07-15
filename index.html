@@ -36,17 +36,14 @@
                 <input class="inputData__input" type="number" id="nAmostra" placeholder="Número da amostra">
             </div>
 
+            <!-- AREA PARA DIGITAR NÚMERO SORTEADO -->
             <div class="inputData__areaNumberSample">
                 <div>
-                    <input type="radio" onclick="DisabledInput()" name="numeroAleatorio" value="true" id="radioAleatorio" checked>
-                    <label for="radioTrue">Sortear automáticamente</label>
-                </div>
-                <div>
-                    <input type="radio" onclick="AbledInput()" name="numeroAleatorio" value="false" id="radioDigitado">
-                    <label for="radioFalse">Digita número sorteado</label>
+                    <input type="checkbox" name="numeroAleatorio" value="false" id="checkboxDigitado">
+                    <label for="checkboxDigitado">Digitar número sorteado</label>
                 </div>
 
-                <input disabled="disabled" type="text" class="inputData__input--disabled" id="nSorteado" placeholder="Número sorteado">
+                <input type="text" class="inputData__input--disabled" id="nSorteado" placeholder="Número sorteado">
             </div>
 
             <button class="inputData__btnCalc" onclick="calcAS()">Calcular</button>

@@ -1,17 +1,16 @@
-const radioAleatorio = document.getElementById('radioAleatorio');
-const radioDigitado = document.getElementById('radioDigitado');
-const nSorteado = document.documentElement('nSorteado');
+const checkboxDigitado = document.getElementById('checkboxDigitado');
+const inputEnterNumber = document.getElementById('nSorteado');
 
-function AbledInput(){
-    if(nSorteado.disabled == true){
-        nSorteado.disabled = false;
-        console.log('tentou desabilitar');
-    }
-}
+let forEnterNumber = false;
+// inputData__input--disabled
 
-function DisabledInput(){
-    if(nSorteado.disabled == false){
-        nSorteado.disabled = true;
-        console.log('tentou abilitar');
+checkboxDigitado.addEventListener("click", () => {
+    if(!forEnterNumber){
+        inputEnterNumber.style.transition = "1s";
+        inputEnterNumber.style.display = "block";
+        forEnterNumber = true;
+    }else{
+        inputEnterNumber.style.display = "none";
+        forEnterNumber = false;
     }
-}
+});

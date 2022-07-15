@@ -23,12 +23,13 @@
 }
 
 .inputData__areaNumberSample{
-    display: none; /*flex*/
+    display: flex; /*flex || none*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     gap: 10px;
+    margin-bottom: 1rem;
 }
 
 .inputData__input--disabled{
@@ -39,6 +40,9 @@
     outline: none;
     margin-bottom: 1rem;
     text-align: center;
+    transition: 1s;
+
+    display: none; /*block | none*/
 }
 
 .inputData__btnCalc{
