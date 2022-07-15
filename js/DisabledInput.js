@@ -6,7 +6,6 @@ let forEnterNumber = false;
 
 checkboxDigitado.addEventListener("click", () => {
     if(!forEnterNumber){
-        inputEnterNumber.style.transition = "1s";
         inputEnterNumber.style.display = "block";
         forEnterNumber = true;
     }else{

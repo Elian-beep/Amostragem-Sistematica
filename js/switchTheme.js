@@ -2,6 +2,7 @@ const areaHeader = document.querySelector(".cabecalho");
 const areaBody = document.querySelector(".container");
 const areaInputsLeft = document.querySelector("#nPopulacao");
 const areaInputsRight = document.querySelector("#nAmostra");
+const areaInputEnter = document.querySelector("#nSorteado");
 const areaResultNumberSample = document.querySelector(".resultNumberSample");
 const areaBtnTheme = document.querySelector(".labelTheme");
 
@@ -18,10 +19,16 @@ btnSwitchTheme.addEventListener('click', ()=> {
 
         areaInputsLeft.style.background = "#15191C"
         areaInputsRight.style.background = "#15191C"
+        areaInputEnter.style.background = "#15191C"
+
         areaInputsLeft.style.color = "#FFFFFF"
         areaInputsRight.style.color = "#FFFFFF"
+        areaInputEnter.style.color = "#FFFFFF"
+
         areaInputsLeft.style.borderBottom = "1px solid #FFFFFF"
         areaInputsRight.style.borderBottom = "1px solid #FFFFFF"
+        areaInputEnter.style.borderBottom = "1px solid #FFFFFF";
+
 
         areaResultNumberSample.style.borderBottom = "1px solid #FFFFFF"
 
@@ -37,10 +44,16 @@ btnSwitchTheme.addEventListener('click', ()=> {
 
         areaInputsLeft.style.background = "#FFFFFF"
         areaInputsRight.style.background = "#FFFFFF"
+        areaInputEnter.style.background = "#FFFFFF";
+
         areaInputsLeft.style.color = "#000"
         areaInputsRight.style.color = "#000"
+        areaInputEnter.style.color = "#000";
+
         areaInputsLeft.style.borderBottom = "1px solid #000"
         areaInputsRight.style.borderBottom = "1px solid #000"
+        areaInputEnter.style.borderBottom = "1px solid #000";
+
 
         areaResultNumberSample.style.borderBottom = "1px solid #000"
         
