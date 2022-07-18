@@ -52,13 +52,17 @@ function allPrecaution(){
     if(parseFloat(nPopulacao.value)<parseFloat(nAmostra.value)){
         alert('O valor da amostra não pode ser maior que da população.');
         return false;
-    }if(escolhaDigitarNumero.checked == true && parseFloat(nInputSorteado.value.length) == 0){
+    }if(escolhaDigitarNumero.checked && parseFloat(nInputSorteado.value.length) == 0){
         alert('Digite o número pré sorteado');
+        return false;
+    }if(!escolhaDigitarNumero.checked){
+        return true;
+    }if(escolhaDigitarNumero.checked && (parseFloat(nInputSorteado.value) > parseFloat(nPopulacao.value)) || (parseFloat(nInputSorteado.value) < parseFloat(nAmostra.value)) ){
+        alert('O número sorteado deve estar entre '+ nPopulacao.value +' e '+ nAmostra.value);
         return false;
     }else{
         return true;
     }
-    // verificar se o campo de numero sorteado esta preenchido caso esteja marcado para digitar
 }
 
 function clearAll() {
