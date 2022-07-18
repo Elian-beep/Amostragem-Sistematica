@@ -12,6 +12,10 @@ let calcItem, nSorteado;
 let resultados = [];
 
 function calcAS() {
+    const precaution = allPrecaution();
+    if(!precaution){
+        return;
+    }
     resultadoBruto.textContent = "";
     resultados.splice(0, resultados.length);
     let intervaloAmostragem = nPopulacao.value / nAmostra.value;
@@ -40,6 +44,20 @@ function createElementResult(calcItem) {
     resultadoBruto.appendChild(div);
 
     console.log(calcItem);
+}
+
+function allPrecaution(){
+    // verificar se a amostra é menor que a população
+
+    
+    console.log('passou por aqui 0');
+    if(nPopulacao.value<nAmostra.value){
+        console.log('passou por aqui 1');
+        alert('O valor da amostra não pode ser maior que da população.');
+        console.log('passou por aqui 2');
+        return false;
+    }
+    // verificar se o campo de numero sorteado esta preenchido caso esteja marcado para digitar
 }
 
 function clearAll() {
