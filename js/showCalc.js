@@ -49,13 +49,14 @@ function createElementResult(calcItem) {
 function allPrecaution(){
     // verificar se a amostra é menor que a população
 
-    
-    console.log('passou por aqui 0');
-    if(nPopulacao.value<nAmostra.value){
-        console.log('passou por aqui 1');
+    if(parseFloat(nPopulacao.value)<parseFloat(nAmostra.value)){
         alert('O valor da amostra não pode ser maior que da população.');
-        console.log('passou por aqui 2');
         return false;
+    }if(escolhaDigitarNumero.checked == true && parseFloat(nInputSorteado.value.length) == 0){
+        alert('Digite o número pré sorteado');
+        return false;
+    }else{
+        return true;
     }
     // verificar se o campo de numero sorteado esta preenchido caso esteja marcado para digitar
 }
