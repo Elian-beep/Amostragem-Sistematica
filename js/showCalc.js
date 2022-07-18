@@ -39,7 +39,7 @@ function calcAS() {
 
 function createElementResult(calcItem) {
     let div = document.createElement('div');
-    div.innerHTML = calcItem;
+    div.innerHTML = calcItem.toFixed(2);
     div.classList.add('itemResultado');
     resultadoBruto.appendChild(div);
 
